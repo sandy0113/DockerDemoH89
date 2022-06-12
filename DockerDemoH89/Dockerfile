@@ -56,4 +56,4 @@ RUN dotnet publish "DockerDemoH89.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "DockerDemoH89.dll"]
+ENTRYPOINT ["dotnet", "DockerDemoH89.csproj"]
